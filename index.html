@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Angola School | Portal Oficial de Vagas Escolares</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+    <div class="topo-container">
+        <h1>Angola School</h1>
+        <p>Portal Oficial de Consulta e Reserva de Vagas Escolares</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="filtros">
+        <div class="grupo">
+            <label for="bairro">Bairro</label>
+            <select id="bairro">
+                <option value="">Todos os Bairros</option>
+                <option value="Vila Alice">Vila Alice</option>
+                <option value="Rangel">Rangel</option>
+                <option value="São Paulo">São Paulo</option>
+            </select>
+        </div>
+        <button id="btnFiltrar">Pesquisar</button>
+    </section>
+
+    <section id="lista-escolas" class="grid"></section>
+
+</main>
+
+<!-- MODAL INSCRIÇÃO -->
+<div id="modal" class="modal">
+    <div class="modal-box">
+        <span class="fechar">&times;</span>
+
+        <h2 id="modalTitulo"></h2>
+        <p id="modalSubtitulo" class="sub"></p>
+
+        <div id="listaVagas" class="vagas"></div>
+
+        <form id="formulario">
+            <h3>Pré-Matrícula</h3>
+            <input type="text" id="nomeAluno" placeholder="Nome completo do aluno" required>
+            <select id="cursoSelect" required>
+                <option value="">Selecione o curso / classe</option>
+            </select>
+            <button type="submit" class="btn-confirmar">Confirmar Reserva</button>
+        </form>
+    </div>
+</div>
+
+<!-- MODAL CONFIRMAÇÃO -->
+<div id="modalConfirmacao" class="modal">
+    <div class="modal-box confirmacao">
+        <h2>Pré-matrícula confirmada</h2>
+        <p id="msgConfirmacao"></p>
+        <button id="btnOk" class="btn-confirmar">Entendido</button>
+    </div>
+</div>
+
+<footer class="rodape">
+    © 2026 Angola School • Plataforma Educacional Oficial-Sandro Butler Kreepshyt
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
